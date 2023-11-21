@@ -1,0 +1,28 @@
+# Visual Studio (Code)
+.vs/
+.vsconfig
+.vsode/
+
+# JetBrains
+.idea/
+
+# Unity Version Control
+.plastic/
+ignore.conf
+
+# Other Unity things
+obj/
+*.meta
+Temp/
+
+# Libraries
+Library/
+
+# Settings
+ProjectSettings/
+UserSettings/
+*.DotSettings.*
+
+# Logs
+Logs/
+
