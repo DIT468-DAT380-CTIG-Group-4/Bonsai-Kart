@@ -31,14 +31,24 @@ public class ThirdPersonMovement : MonoBehaviour
         
         float angleDiff = 0f;
         float fwd = v > 0 ? 1 : -1;
+        
         // Camera rotations
-        if (Input.GetKey("a"))
+        
+        // Left turn
+        if (Input.GetKey(KeyCode.A))
         {
-            angleDiff = -50 * Time.deltaTime * fwd;
+            angleDiff -= 50 * Time.deltaTime * fwd;
         }
-        if (Input.GetKey("d"))
+        // Right turn
+        if (Input.GetKey(KeyCode.D))
         {
-            angleDiff = 50 * Time.deltaTime * fwd;
+            angleDiff += 50 * Time.deltaTime * fwd;
+        }
+
+        // Sharp turns with space
+        if (Input.GetKey(KeyCode.Space))
+        {
+            angleDiff *= 1.5f;
         }
 
         thirdPersonCam.m_XAxis.Value += angleDiff;
